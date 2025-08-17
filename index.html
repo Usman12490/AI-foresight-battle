@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Defense: AI Foresight Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Strategic Defense: AI Foresight Battle</h1>
+        <p class="subtitle">AI predicts your tower placements and adapts its attack strategy</p>
+    </div>
+
+    <div class="game-container">
+        <div class="battlefield">
+            <div class="game-phase" id="gamePhase">📍 Setup Phase: Place your towers strategically!</div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" onclick="placeTower()" id="towerBtn">🏗️ Place Tower</button>
+                <button class="btn btn-warning" onclick="startBattle()" id="battleBtn">⚔️ Start Battle</button>
+                <button class="btn btn-danger" onclick="resetGame()">🔄 Reset Game</button>
+            </div>
+
+            <div class="grid" id="battlefield"></div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4ecdc4;"></div>
+                    <span>Start</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff6b6b;"></div>
+                    <span>Goal</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(45deg, #45b7d1, #2980b9);"></div>
+                    <span>Tower</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #e74c3c;"></div>
+                    <span>Enemy</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: rgba(255, 193, 7, 0.5); border: 1px solid #ffc107;"></div>
+                    <span>Predicted</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-panel">
+            <h3>🧠 AI Battle Command</h3>
+            
+            <div class="wave-info">
+                <h4>Wave Status</h4>
+                <div id="waveInfo">Preparing battle simulation...</div>
+            </div>
+
+            <div class="thinking-indicator" id="thinking">
+                <div class="spinner"></div>
+                <span>AI analyzing your defenses...</span>
+            </div>
+
+            <div class="status-panel">
+                <h4>🎯 AI Strategy:</h4>
+                <div id="aiStrategy">Waiting for tower placement...</div>
+            </div>
+
+            <div class="prediction-tree" id="predictionTree">
+                <h4>🔮 Battle Predictions:</h4>
+                <div id="predictions">AI will analyze possible attack routes once you place towers...</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="towersPlaced">0</div>
+                    <div>Towers Placed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="pathsAnalyzed">0</div>
+                    <div>Paths Analyzed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="bestPath">-</div>
+                    <div>Best AI Path</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="successRate">100%</div>
+                    <div>AI Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  
+</body>
+
+</html>
